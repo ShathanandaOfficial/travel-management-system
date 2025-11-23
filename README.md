@@ -1,187 +1,208 @@
-```markdown
+---
+
 # 🌍 Travel Management System
 
-A complete full-stack web application for managing travel bookings built with **React**, **Tailwind CSS**, **Python Flask**, and **MySQL**. Perfect for DBMS academic projects demonstrating real-world web development.
-
-## ✨ Features
-
-- **👤 User Authentication** - Secure registration and login system
-- **🎒 Travel Packages** - Browse and view available travel packages
-- **📅 Booking System** - Book packages with dynamic pricing calculation
-- **👨‍💼 Admin Dashboard** - Manage packages and view all bookings
-- **📱 Responsive Design** - Mobile-friendly UI with Tailwind CSS
-- **🔒 Secure Sessions** - Flask session-based authentication
-- **🗄️ Database Relationships** - Proper MySQL foreign key relationships
-
-## 🛠️ Tech Stack
-
-**Frontend:** React, Tailwind CSS, Vite, Axios  
-**Backend:** Python Flask, Flask-CORS, Flask-Bcrypt  
-**Database:** MySQL  
-**Authentication:** Session-based with Bcrypt hashing
+A full-stack web application for managing travel bookings built with **React**, **Tailwind CSS**, **Python Flask**, and **MySQL**.
+Perfect for DBMS academic projects showcasing real-world development.
 
 ---
 
-## 📁 Project Structure
+# ✨ Features
+
+* **User Authentication** – Secure login & registration
+* **Travel Packages** – Browse travel packages with descriptions
+* **Booking System** – Book packages with total price calculation
+* **Admin Dashboard** – Manage packages & view user bookings
+* **Responsive UI** – Tailwind CSS for clean and modern design
+* **Secure Sessions** – Flask-based session authentication
+* **Proper DBMS Concepts** – Relationships, joins, foreign keys
+
+---
+
+# 🛠️ Tech Stack
+
+**Frontend:** React, Vite, Tailwind CSS, Axios
+**Backend:** Python Flask, Flask-CORS, Flask-Bcrypt
+**Database:** MySQL
+**Auth:** Session-based with hashed passwords
+
+---
+
+# 📁 Project Structure
 
 ```
 travel-management-system/
 │
-├── 📂 backend/
-│   ├── 🐍 app.py                 # Main Flask application
-│   ├── ⚙️ config.py              # Configuration settings
-│   ├── 📋 requirements.txt       # Python dependencies
-│   ├── 🔐 .env                   # Environment variables
-│   ├── 📂 routes/
-│   │   ├── 🔑 auth_routes.py     # Authentication endpoints
-│   │   ├── 🎒 package_routes.py  # Package management endpoints
-│   │   └── 📅 booking_routes.py  # Booking endpoints
-│   ├── 📂 models/
-│   │   ├── 👤 user_model.py      # User data operations
-│   │   ├── 🎒 package_model.py   # Package data operations
-│   │   └── 📅 booking_model.py   # Booking data operations
-│   └── 📂 database/
-│       └── 🔗 connection.py      # Database connection setup
+├── backend/
+│   ├── app.py                 # Main Flask application
+│   ├── config.py              # Configuration settings
+│   ├── requirements.txt       # Python dependencies
+│   ├── .env                   # Environment variables
+│   ├── routes/
+│   │   ├── auth_routes.py     # Authentication APIs
+│   │   ├── package_routes.py  # Package APIs
+│   │   └── booking_routes.py  # Booking APIs
+│   ├── models/
+│   │   ├── user_model.py      # User data operations
+│   │   ├── package_model.py   # Package data operations
+│   │   └── booking_model.py   # Booking data operations
+│   └── database/
+│       └── connection.py      # MySQL connection setup
 │
-└── 📂 frontend/
-    ├── 🏠 index.html
-    ├── 📦 package.json
-    ├── ⚡ vite.config.js
-    ├── 🎨 tailwind.config.js
-    ├── 📂 src/
-    │   ├── 🎯 App.jsx            # Main React component
-    │   ├── 🔥 main.jsx           # React DOM entry point
-    │   ├── 📂 pages/
-    │   │   ├── 🏠 Home.jsx
-    │   │   ├── 🎒 Packages.jsx
-    │   │   ├── 🔑 Login.jsx
-    │   │   ├── 📝 Register.jsx
-    │   │   ├── 📅 BookPackage.jsx
-    │   │   └── 👨‍💼 AdminDashboard.jsx
-    │   ├── 📂 components/
-    │   │   ├── 🧭 Navbar.jsx
-    │   │   ├── 🎴 PackageCard.jsx
-    │   │   └── 🦶 Footer.jsx
-    │   ├── 📂 utils/
-    │   │   └── 🌐 api.js         # API service functions
-    │   └── 📂 styles/
-    │       └── 🌍 global.css     # Global styles
+└── frontend/
+    ├── index.html
+    ├── package.json
+    ├── vite.config.js
+    ├── tailwind.config.js
+    ├── src/
+    │   ├── App.jsx
+    │   ├── main.jsx
+    │   ├── pages/
+    │   │   ├── Home.jsx
+    │   │   ├── Packages.jsx
+    │   │   ├── Login.jsx
+    │   │   ├── Register.jsx
+    │   │   ├── BookPackage.jsx
+    │   │   └── AdminDashboard.jsx
+    │   ├── components/
+    │   │   ├── Navbar.jsx
+    │   │   ├── PackageCard.jsx
+    │   │   └── Footer.jsx
+    │   ├── utils/
+    │   │   └── api.js
+    │   └── styles/
+    │       └── global.css
 ```
 
 ---
 
-## 🚀 Installation & Setup
+# 🚀 Installation & Setup
 
-### Prerequisites
-- **Node.js** (v14 or higher)
-- **Python** (v3.8 or higher)
-- **MySQL** Server
-- **Git**
+## 1️⃣ Prerequisites
 
-### Step 1: Clone the Repository
+Install the following:
+
+* Node.js (v14+)
+* Python (v3.8+)
+* MySQL Server
+* Git
+
+---
+
+# 2️⃣ Clone the Repository
+
 ```bash
 git clone https://github.com/your-username/travel-management-system.git
 cd travel-management-system
 ```
 
-### Step 2: Backend Setup
+---
 
-#### Navigate to backend folder:
+# 3️⃣ Backend Setup
+
+### Navigate to backend folder:
+
 ```bash
 cd backend
 ```
 
-#### Install Python dependencies:
+### Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
-#### Create `.env` file:
-```bash
-# Create .env file in backend folder
+### Create `.env` file:
+
+```
 MYSQL_HOST=localhost
 MYSQL_USER=root
 MYSQL_PASSWORD=your_mysql_password
 MYSQL_DATABASE=travel_db
-SECRET_KEY=your-secret-key-here
+SECRET_KEY=your_secret_key
 ```
 
-#### Start the backend server:
+### Start backend:
+
 ```bash
 python app.py
 ```
 
-**✅ Expected Output:**
+**Expected Output:**
+
 ```
-✅ Database tables created successfully!
-🚀 Starting Travel Management System Backend...
-📊 Database initialization completed!
-🌐 Server running on http://localhost:5000
+Database tables created successfully
+Server running on http://localhost:5000
 ```
 
-### Step 3: Frontend Setup
+---
 
-#### Open new terminal and navigate to frontend:
+# 4️⃣ Frontend Setup
+
+### Navigate to frontend:
+
 ```bash
 cd frontend
 ```
 
-#### Install Node.js dependencies:
+### Install dependencies:
+
 ```bash
 npm install
 ```
 
-#### Start the frontend development server:
+### Run development server:
+
 ```bash
 npm run dev
 ```
 
-**✅ Expected Output:**
-```
-  Vite dev server running at:
-  ➜  Local:   http://localhost:3000/
-```
+Local server:
+➡️ [http://localhost:3000/](http://localhost:3000/)
 
-### Step 4: Database Setup
+---
 
-#### Using MySQL Command Line:
+# 5️⃣ Database Setup
+
+### Using MySQL CLI:
+
 ```bash
 mysql -u root -p
-
-# Create database
 CREATE DATABASE travel_db;
-
-# Verify database
 SHOW DATABASES;
 ```
 
-#### Using MySQL Workbench:
-1. Open MySQL Workbench
-2. Connect to your MySQL instance
-3. Create new database:
+### Using MySQL Workbench:
+
+1. Open Workbench
+2. Connect to MySQL instance
+3. Run:
+
    ```sql
    CREATE DATABASE travel_db;
    ```
-4. The backend will automatically create tables on first run
+
+Backend will auto-create tables.
 
 ---
 
-## 🔑 Default Login Credentials
+# 🔑 Default Credentials
 
-### Admin Account:
-- **Email:** `admin@travel.com`
-- **Password:** `admin123`
+### Admin:
 
-### Regular User:
-- Register any new account through the registration page
+* Email: **[admin@travel.com](mailto:admin@travel.com)**
+* Password: **admin123**
+
+### Users:
+
+* Register from the frontend
 
 ---
 
-## 🗄️ Database Schema
+# 🗄️ Database Schema
 
-### Tables Structure:
+## customers
 
-#### `customers` Table:
 ```sql
 CREATE TABLE customers (
     customer_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -194,7 +215,8 @@ CREATE TABLE customers (
 );
 ```
 
-#### `travel_packages` Table:
+## travel_packages
+
 ```sql
 CREATE TABLE travel_packages (
     package_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -206,7 +228,8 @@ CREATE TABLE travel_packages (
 );
 ```
 
-#### `bookings` Table:
+## bookings
+
 ```sql
 CREATE TABLE bookings (
     booking_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -222,225 +245,106 @@ CREATE TABLE bookings (
 
 ---
 
-## 🌐 API Endpoints
+# 🌐 API Endpoints
 
-### Authentication Routes (`/auth`)
-- `POST /auth/register` - User registration
-- `POST /auth/login` - User login
-- `POST /auth/logout` - User logout
+## Authentication (`/auth`)
 
-### Package Routes (`/api`)
-- `GET /api/packages` - Get all packages
-- `POST /api/packages` - Create new package (Admin only)
-- `GET /api/packages/<id>` - Get specific package
+* POST `/auth/register`
+* POST `/auth/login`
+* POST `/auth/logout`
 
-### Booking Routes (`/api`)
-- `POST /api/bookings` - Create new booking
-- `GET /api/bookings` - Get all bookings (Admin only)
+## Packages (`/api`)
 
----
+* GET `/api/packages`
+* POST `/api/packages`
+* GET `/api/packages/<id>`
 
-## 🎯 Usage Guide
+## Bookings (`/api`)
 
-### For Users:
-1. **Browse Packages:** Visit Packages page to see available trips
-2. **Register/Login:** Create account or login with existing credentials
-3. **Book Package:** Click "Book Now" on any package
-4. **Select Travelers:** Choose number of travelers and confirm booking
-
-### For Admins:
-1. **Login** with admin credentials
-2. **Access Admin Dashboard** from navigation
-3. **Add New Packages** using the form
-4. **View All Bookings** in the bookings tab
+* POST `/api/bookings`
+* GET `/api/bookings`
 
 ---
 
-## 🐛 Troubleshooting
+# 🐛 Troubleshooting
 
-### Common Issues & Solutions:
+### MySQL not running:
 
-#### 1. MySQL Connection Error
 ```bash
-# Check if MySQL service is running
-sudo service mysql status
-
-# Start MySQL service
 sudo service mysql start
 ```
 
-#### 2. Port Already in Use
+### Port already in use:
+
 ```bash
-# Kill process using port 5000
 sudo lsof -t -i tcp:5000 | xargs kill -9
-
-# Or change port in app.py
-app.run(debug=True, port=5001)
 ```
 
-#### 3. Module Not Found (Python)
+### Python module errors:
+
 ```bash
-# Reinstall requirements
 pip install -r requirements.txt
-
-# If using virtual environment
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
 ```
 
-#### 4. Frontend Build Issues
+### Frontend build errors:
+
 ```bash
-# Clear node_modules and reinstall
 rm -rf node_modules package-lock.json
 npm install
 ```
 
-#### 5. Database Tables Not Created
-- Check MySQL credentials in `.env` file
-- Ensure database `travel_db` exists
-- Check backend logs for error messages
+---
+
+# 📊 DBMS Concepts Covered
+
+* CRUD operations
+* Relationships (1-to-many)
+* Foreign keys
+* SQL joins
+* Authentication system
+* Data validation
+* Transactions
 
 ---
 
-## 📊 DBMS Concepts Demonstrated
+# 🖥️ Running the Application
 
-- ✅ **CRUD Operations** - Create, Read, Update, Delete
-- ✅ **Foreign Keys & Relationships** - Customer → Bookings → Packages
-- ✅ **SQL Joins** - Multi-table queries for booking data
-- ✅ **Database Authentication** - Secure user login system
-- ✅ **Data Integrity** - Constraints and validations
-- ✅ **Transaction Management** - Atomic booking operations
-
----
-
-## 🖥️ Running the Application
-
-### Quick Start Commands:
 ```bash
-# Terminal 1 - Backend
+# Backend
 cd backend
 python app.py
 
-# Terminal 2 - Frontend  
+# Frontend
 cd frontend
 npm run dev
 ```
 
-### Access Points:
-- **Frontend Application:** http://localhost:3000
-- **Backend API:** http://localhost:5000
-- **API Test:** http://localhost:5000/api/packages
+---
+
+# 👥 Contributing
+
+1. Fork the repo
+2. Create a branch
+3. Commit changes
+4. Push and submit PR
 
 ---
 
-## 👥 Contributing
+# 📄 License
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙏 Acknowledgments
-
-- Built as a DBMS Academic Project
-- React & Flask documentation
-- Tailwind CSS for styling
-- MySQL for database management
-
----
-
-## 📞 Support
-
-If you have any questions or issues, please open an issue on GitHub or contact the development team.
-
----
-
-**Happy Travels! 🌎✈️**
-```
-
----
-
-## 🎯 **Additional Files to Create:**
-
-### **1. .gitignore** (in project root)
-```gitignore
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-env/
-venv/
-.venv/
-.env
-
-# Node.js
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-dist/
-build/
-
-# Database
-*.db
-*.sqlite3
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS
-.DS_Store
-Thumbs.db
-```
-
-### **2. LICENSE** (in project root - optional)
-```text
 MIT License
 
-Copyright (c) 2024 Travel Management System
+---
 
-Permission is hereby granted...
-```
+# 🙏 Acknowledgments
+
+* Built for DBMS Academic Activity
+* React & Flask documentation
+* Tailwind CSS
+* MySQL
 
 ---
 
-## 🚀 **Final Push to GitHub:**
+# 🎉 Happy Coding & Happy Travels!
 
-```bash
-# Initialize git
-git init
-
-# Add all files
-git add .
-
-# Initial commit
-git commit -m "feat: Complete Travel Management System
-
-- Frontend: React + Tailwind CSS with Vite
-- Backend: Python Flask with MySQL
-- Features: User authentication, package booking, admin dashboard
-- Database: MySQL with proper relationships and CRUD operations
-- Responsive design and RESTful APIs"
-
-# Connect to GitHub (create repo first)
-git remote add origin https://github.com/your-username/travel-management-system.git
-
-# Push to main branch
-git branch -M main
-git push -u origin main
-```
+---
